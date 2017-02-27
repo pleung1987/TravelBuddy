@@ -23,17 +23,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't$kv*^8f5&&&j7a&la%r#nfd)r6gch6%uf82_h$go9&m$7fpe8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://54.186.189.30/']
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 # Application definition
 
 INSTALLED_APPS = [
     'apps.whisper',
     'django_extensions',
-    'django.contrib.humanize', 
+    'django.contrib.humanize',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
